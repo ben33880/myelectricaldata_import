@@ -223,7 +223,7 @@ class Stat:  # pylint: disable=R0902,R0904
                 if previous_day_data:
                     color = previous_day_data[0].color
                 else:
-                    color = "UNKNOWN"
+                    color = "blue"
                     logging.warning(f"No tempo data found for previous day: {begin - timedelta(days=1)}")
                 color = f"{color.lower()}_hc"
             elif hour >= 22:
@@ -231,7 +231,7 @@ class Stat:  # pylint: disable=R0902,R0904
                 if next_day_data:
                     color = next_day_data[0].color
                 else:
-                    color = "UNKNOWN"
+                    color = "blue"
                     logging.warning(f"No tempo data found for next day: {begin + timedelta(days=1)}")
                 color = f"{color.lower()}_hc"
             else:
@@ -239,7 +239,7 @@ class Stat:  # pylint: disable=R0902,R0904
                 if current_day_data:
                     color = current_day_data[0].color
                 else:
-                    color = "UNKNOWN"
+                    color = "blue"
                     logging.warning(f"No tempo data found for current day: {begin}")
                 color = f"{color.lower()}_hp"
                 
